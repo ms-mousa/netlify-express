@@ -1,9 +1,14 @@
 :root {
-  --main-bg-color: rgb(220, 220, 235);
-  --header-bg-color: black;
-  --header-color: white;
-  --footer-bg-color: black;
-  --footer-color: white;
+  --main-bg-color: #dcdceb;
+}
+
+@font-face {
+  font-family: 'Permanent Marker';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Permanent Marker Regular'), local('PermanentMarker-Regular'), url(https://fonts.gstatic.com/s/permanentmarker/v9/Fh4uPib9Iyv2ucM6pGQMWimMp004La2Cfw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 html {
@@ -20,35 +25,48 @@ body {
   width: 100vw;
   min-height: 100vh;
   display: grid;
-  grid-template-areas: 
-  "header"
-  "content1"
-  "content2"
-  "footer";
+  grid-template-areas:
+    "header"
+    "content1"
+    "content2"
+    "footer";
   grid-template-rows: 80px 1fr 30px;
 }
 
 header {
+  display: flex;
+  align-items: center;
   grid-area: header;
   width: 100vw;
-  background-color: var(--header-bg-color);
+  background: #8E2DE2;
+  background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
+  background: linear-gradient(to right, #4A00E0, #8E2DE2);
   color: var(--header-color);
 }
 
-#title-bar {
+#title-bar {}
+
+h1 a {
   text-align: center;
+  font-family: 'Permanent Marker', cursive;
+  text-decoration: none;
+  color: black;
+  margin-left: 2.5%;
 }
 
 #top-nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  flex-direction: row-reverse;
+  align-content: center;
+  margin-right: 2%;
 }
 
 .nav-links {
   display: flex;
   list-style: none;
+  z-index: 1;
 }
 
 .nav-item a {
@@ -69,6 +87,30 @@ header {
 
 footer {
   grid-area: footer;
-  background-color: var(--footer-bg-color);
-  color: var(--footer-color);
+  color: black;
+  font-weight: bold;
+  background: #8E2DE2;
+  background: -webkit-linear-gradient(to left, #4A00E0, #8E2DE2);
+  background: linear-gradient(to, #4A00E0, #8E2DE2);
+}
+
+footer p {
+  font-family: 'Permanent Marker';
+  margin-left: 2.5%;
+}
+
+.highlight {
+  transition: all 0.2s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ffffff5e;
+  border-radius: 10%;
+  display: block;
+  z-index: 0;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
 }
