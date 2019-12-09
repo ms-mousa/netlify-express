@@ -1,0 +1,241 @@
+/* Basic CSS Reset */
+
+* {
+    padding: 0;
+    line-height: 1;
+    margin: 0;
+    font-size: 100%;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    --color-primary: #6C63FF;
+    --color-scondary: #F0EFFF;
+    --color-text-primary: #111D5E;
+    --color-text-secondary: #EEEEEE;
+    --color-text-highlight: #EE8E9E;
+    --color-text-heading: #283593;
+}
+
+
+/* Styles for buttons and they variations */
+
+.btn {
+    color: var(--color-text-secondary);
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.btn_primary {
+    background: var(--color-primary);
+    width: 80px;
+    /* This is added to 50px of padding */
+}
+
+.btn_secondary {
+    background: white;
+    font-size: 1.5rem;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    width: 200px;
+}
+
+
+/* basic different text styles */
+
+.text_prim {
+    font-size: 4rem;
+    color: var(--color-primary);
+}
+
+.text_sec {
+    font-size: 3rem;
+    color: var(--color-primary);
+}
+
+.text_slogan {
+    font-size: 1.6rem;
+    color: var(--color-text-primary);
+}
+
+
+/* Styles for the header that includes nav and logo */
+
+header {
+    height: 15vh;
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* styles for logo image */
+
+.logo {
+    height: 25px;
+    width: auto;
+}
+
+
+/* Setting up the links */
+
+nav a {
+    font-size: 1.1rem;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    margin: 15px;
+    font-size: 1.5rem;
+    transition: color 0.2s ease-in-out;
+}
+
+
+/* Styles for main banner div */
+
+.bnr {
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    height: 70vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* stles for text div inside banner */
+
+.bnr-text {
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    justify-content: space-around;
+}
+
+
+/* Styles for the background two circles */
+
+.jblst-bg {
+    width: 100vw;
+    max-width: 100%;
+    height: 150vh;
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.bg_eli1 {
+    position: relative;
+    float: left;
+    left: -600px;
+}
+
+.bg_eli2 {
+    position: absolute;
+    float: right;
+    top: 350px;
+    right: -30px;
+}
+
+
+/* styles for the main div containing the job listings */
+
+.jblst {
+    margin: 50px auto;
+    width: 80vw;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* Heading styles */
+
+.lst-head {
+    font-size: 2.5rem;
+}
+
+
+/* div containing actual list of jobs */
+
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+/* single job listing styles */
+
+.job {
+    margin: 20px 0;
+    width: 60vw;
+    background: white;
+    display: flex;
+    padding: 10px 40px;
+    border: 2px solid var(--color-primary);
+    border-radius: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.job-logo {
+    width: 8%;
+    height: auto;
+}
+
+.job-comp {
+    width: 40%;
+    text-align: left;
+    padding: 10px;
+    height: 100%;
+}
+
+.job-comp h3 {
+    font-size: 1.3rem;
+    font-display: bold;
+    margin-bottom: 3px;
+}
+
+.job-comp h4 {
+    font-weight: 300;
+}
+
+.job-loc,
+.job-type {
+    flex: 0 0 20%;
+}
+
+
+/* styling for call for action div */
+
+.act {
+    width: 80vw;
+    height: 70vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('/img/icanfly.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 20px;
+}
+
+.act-text {
+    margin: 20px;
+    width: 50%;
+}
+
+.act-text span {
+    color: var(--color-text-highlight);
+}
+
+.btn_start {
+    width: 150px;
+    margin-left: 20px;
+}
