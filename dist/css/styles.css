@@ -110,7 +110,6 @@ nav a {
     align-items: center;
 }
 
-
 /* stles for text div inside banner */
 
 .bnr-text {
@@ -256,6 +255,11 @@ nav a {
 
     .logo {
         width: 200px;
+        height: auto;
+    }
+
+    .bnr-illu {
+        max-width: 40vw;
         height: auto;
     }
 
