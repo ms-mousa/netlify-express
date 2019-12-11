@@ -1,3 +1,4 @@
+// open and close hamburger menu
 let isOpen = false;
 
 document.getElementById('hamburger-menu').addEventListener('click', openMenu);
@@ -13,3 +14,4 @@ function openMenu() {
     document.querySelector(".menu").style.display = 'none';
   }
 }
+// end of menu
