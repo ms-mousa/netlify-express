@@ -41,7 +41,6 @@
     width: 200px;
 }
 
-
 /* basic different text styles */
 
 .text_prim {
@@ -63,7 +62,7 @@
 /* Styles for the header that includes nav and logo */
 
 header {
-    height: 15vh;
+    height: 20vh;
     width: 80vw;
     margin: 0 auto;
     display: flex;
@@ -91,6 +90,14 @@ nav a {
     transition: color 0.2s ease-in-out;
 }
 
+#hamburger-menu {
+    display: none;
+}
+
+#mobile-menu {
+    display: none;
+}
+
 
 /* Styles for main banner div */
 
@@ -103,6 +110,10 @@ nav a {
     align-items: center;
 }
 
+.bnr-illu {
+    max-width: 50vw;
+    height: auto;
+}
 
 /* stles for text div inside banner */
 
@@ -238,4 +249,68 @@ nav a {
 .btn_start {
     width: 150px;
     margin-left: 20px;
+}
+
+@media only screen and (max-device-width: 764px) {
+    #hamburger-menu {
+        display: block;
+        float: right;
+        cursor: pointer;
+    }
+
+    .logo {
+        width: 30vw;
+        height: auto;
+    }
+
+    .bnr-illu {
+        max-width: 40vw;
+        height: auto;
+    }
+
+    .text_prim {
+        font-size: 2rem;
+    }
+    
+    .text_sec {
+        font-size: 1.3rem;
+    }
+
+    .text_slogan {
+        font-size: 1rem;
+    }
+
+    nav a {
+        margin: 5px;
+        font-size: .8rem;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
+        clear: both;
+    }
+
+    .btn {
+        color: var(--color-text-secondary);
+        padding: 5px 10px;
+        border-radius: 30px;
+        font-size: .7rem;
+        text-align: center;
+    }
+    
+    .btn_primary {
+        background: var(--color-primary);
+        width: 50px;
+        /* This is added to 50px of padding */
+    }
+
+    .btn_secondary {
+        font-size: .7rem;
+        border: 1.1px solid var(--color-primary);
+        color: var(--color-primary);
+        width: 150px;
+    }
 }

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <title>CCWebDevJobBoard</title>
 </head>
@@ -13,13 +13,115 @@
 <body>
 
     <header>
-        <img src="./img/logo.png" alt="Site logo">
-        <nav></nav>
+        <img class="logo" src="./img/logo.png" alt="Site logo">
+        <nav>
+            <a id="hamburger-menu" for="mobile-menu"> <img id="hamburger-menu-img" src="./img/menu_Ham.png" alt="menu button"> </a>
+            <div class="menu">
+                <a href="#">About us</a>
+                <a href="#">Sign in</a>
+                <a class="btn btn_primary" href="#">Post Job</a>
+            </div>
+        </nav>
     </header>
+    <div class="bnr">
+        <div class="bnr-text">
+            <h1 class='text_prim'>Find the best job offer for You</h1>
+            <h3 class="text_slogan">Are you looking for the job of your dreams? Sign Up to get started!</h3>
+            <a class="btn btn_primary" href="#">Sign Up</a>
+        </div>
+        <img class="bnr-illu" src="./img/banner.png" alt="">
+    </div>
 
-
-
-    <script src="js/nav.js" type="text/JavaScript"></script>
+    <div class="jblst-bg">
+        <img class="bg_eli1" src="./img/ellipse.svg" alt=""><img src="" alt="">
+        <img class="bg_eli2" src="./img/ellipse2.svg" alt=""><img src="" alt="">
+    </div>
+    <div class="jblst">
+        <h2 class="text_prim lst-head">
+            Featured Jobs
+        </h2>
+        <div class="list">
+            <div class="job">
+                <img class="job-logo" src="./img/ebay.png" alt="company logo">
+                <div class="job-comp">
+                    <h3>Front End Developer</h3>
+                    <h4>Ebay inc</h4>
+                </div>
+                <h2 class="job-loc">San Jose</h2>
+                <h2 class="job-type">Full Time</h2>
+            </div>
+            <div class="job">
+                <img class="job-logo" src="./img/intel.png" alt="company logo">
+                <div class="job-comp">
+                    <h3>Software Engineer</h3>
+                    <h4>Intel Corporation</h4>
+                </div>
+                <h2 class="job-loc">San Fransisco</h2>
+                <h2 class="job-type">Full Time</h2>
+            </div>
+            <div class="job">
+                <img class="job-logo" src="./img/apple.png" alt="company logo">
+                <div class="job-comp">
+                    <h3>Web Engineer</h3>
+                    <h4>Apple Inc</h4>
+                </div>
+                <h2 class="job-loc">Palo Alto</h2>
+                <h2 class="job-type">Full Time</h2>
+            </div>
+            <div class="job">
+                <img class="job-logo" src="./img/ebay.png" alt="company logo">
+                <div class="job-comp">
+                    <h3>Front End Developer</h3>
+                    <h4>Ebay inc</h4>
+                </div>
+                <h2 class="job-loc">San Jose</h2>
+                <h2 class="job-type">Full Time</h2>
+            </div>
+            <div class="job">
+                <img class="job-logo" src="./img/intel.png" alt="company logo">
+                <div class="job-comp">
+                    <h3>Software Engineer</h3>
+                    <h4>Intel Corporation</h4>
+                </div>
+                <h2 class="job-loc">San Fransisco</h2>
+                <h2 class="job-type">Full Time</h2>
+            </div>
+            <div class="job">
+                <img class="job-logo" src="./img/apple.png" alt="company logo">
+                <div class="job-comp">
+                    <h3>Web Engineer</h3>
+                    <h4>Apple Inc</h4>
+                </div>
+                <h2 class="job-loc">Palo Alto</h2>
+                <h2 class="job-type">Full Time</h2>
+            </div>
+            <div class="job">
+                <img class="job-logo" src="./img/intel.png" alt="company logo">
+                <div class="job-comp">
+                    <h3>Software Engineer</h3>
+                    <h4>Intel Corporation</h4>
+                </div>
+                <h2 class="job-loc">San Fransisco</h2>
+                <h2 class="job-type">Full Time</h2>
+            </div>
+            <div class="job">
+                <img class="job-logo" src="./img/apple.png" alt="company logo">
+                <div class="job-comp">
+                    <h3>Web Engineer</h3>
+                    <h4>Apple Inc</h4>
+                </div>
+                <h2 class="job-loc">Palo Alto</h2>
+                <h2 class="job-type">Full Time</h2>
+            </div>
+            <a href="#" class="btn btn_secondary">
+                See More Jobs
+            </a>
+        </div>
+    </div>
+    <div class="act">
+        <h2 class="text_sec act-text">Start Working for an <span>amazing</span> company</h2>
+        <a href="#" class="btn btn_primary btn_start">Get Started</a>
+    </div>
 <script type="text/javascript" src="bundle.js"></script></body>
 
 </html>
