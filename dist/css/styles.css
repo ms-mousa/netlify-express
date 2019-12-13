@@ -14,6 +14,8 @@
     --color-text-secondary: #EEEEEE;
     --color-text-highlight: #EE8E9E;
     --color-text-heading: #283593;
+    --color-label-primary: #3A3768;
+    --color-input-background: #EAECF0;
 }
 
 
@@ -31,6 +33,9 @@
     background: var(--color-primary);
     width: 80px;
     /* This is added to 50px of padding */
+}
+.btn_large {
+    width: 186px;
 }
 
 .btn_secondary {
@@ -253,13 +258,6 @@ nav a {
 /*
 Utilities
  */
-.button {
-    padding: 0.2em 1.5em;
-    text-decoration: none;
-    box-sizing: border-box;
-    border-radius: 50px;
-    border: 4px solid var(--primary);
-}
 .text-ruler {
     display: flex;
     line-height: 1em;
@@ -275,27 +273,15 @@ Utilities
     margin-left: 20px;
 }
 /* Styles for signup screen start */
-.signup-container {
-    padding: 30px 90px;
-}
-.action-button {
-    background: var(--header-color);
-    border: 4px solid var(--primary);
-}
-.action-button:hover,
-.action-button:active {
-    background: var(--primary);
-    border-color: var(--primary);
-    color: var(--header-color);
-}
-.signup-header a{
-    margin-left: 10px;
-    font-size: 30px;
+.header-label {
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--color-label-primary);
 }
 .signup-section {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 83px;
+    margin-top: 80px;
 }
 .signup-main {
     display: flex;
@@ -304,11 +290,12 @@ Utilities
 .signup-main h1 {
     font-size: 40px;
     font-weight: 500;
-    color: var(--warm);
+    padding: 10px 0;
+    color: var(--color-text-heading);
 }
 .signup-main p {
     font-size: 30px;
-    color: var(--accent);
+    color: var(--color-label-primary);
 }
 .signup-form {
     display: flex;
@@ -316,28 +303,30 @@ Utilities
 }
 .signup-form .input {
     height: 63px;
-    background: var(--input-bg-color);
+    background: var(--color-input-background);
     margin-top: 26px;
-    border: 1px solid var(--primary);
+    border: 1px solid var(--color-primary);
     border-radius: 10px;
     padding-left: 25px;
 }
 .signup-form .input::placeholder {
-    color: var(--warm);
+    color: var(--color-text-heading);
     font-size: 25px;
     font-weight: 300;
 }
 .terms {
+    display: flex;
     margin-top: 26px;
 }
 .terms label {
     font-size: 15px;
-    color: var(--warm);
+    margin-left: 5px;
+    color: var(--color-text-heading);
 }
 .terms a,
 .terms a:visited,
 .terms a:active{
-    color: var(--danger);
+    color: var(--color-text-highlight);
     text-decoration: none;
 }
 .terms a:hover {
@@ -356,27 +345,18 @@ Utilities
     display: flex;
     justify-content: center;
 }
-.create-button {
-    background: var(--primary);
-    color: var(--header-color);
-    font-size: 20px;
-}
 .external-actions {
     display: flex;
     justify-content: space-between;
 }
-.external-actions > .button {
+.external-actions > .btn {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    border-width: 3px;
     font-size: 15px;
-    font-weight: normal;
-    min-width: 227px;
-    color: #000;
-
 }
 /* Styles for signup screen end*/
+
 @media only screen and (max-device-width: 764px) {
     #hamburger-menu {
         display: block;
@@ -421,7 +401,7 @@ Utilities
 
     .btn {
         color: var(--color-text-secondary);
-        padding: 5px 10px;
+        padding: 10px;
         border-radius: 30px;
         font-size: .7rem;
         text-align: center;
@@ -438,5 +418,44 @@ Utilities
         border: 1.1px solid var(--color-primary);
         color: var(--color-primary);
         width: 150px;
+    }
+    .btn_large {
+        width: 150px;
+    }
+
+    .header-label, .signup-art {
+        display: none;
+    }
+    .signup-section {
+        margin: 0;
+        padding: 10px;
+    }
+    .signup-main h1 {
+        font-size: 25px;
+    }
+    .signup-main p {
+        font-size: 15px;
+    }
+    .signup-form .input {
+        height: 50px;
+        margin-top: 26px;
+        padding-left: 10px;
+    }
+    .signup-form .input::placeholder {
+        font-size: 20px;
+    }
+    .terms label {
+        font-size: 12px;
+    }
+    .signup-action {
+        margin-top: 20px;
+    }
+    .external-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    .external-actions .icon-button {
+        font-size: 0.7rem;
+        margin: 5px 0;
     }
 }
