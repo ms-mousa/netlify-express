@@ -250,7 +250,149 @@ nav a {
     width: 150px;
     margin-left: 20px;
 }
+/*
+Utilities
+ */
+.button {
+    padding: 0.2em 1.5em;
+    text-decoration: none;
+    box-sizing: border-box;
+    border-radius: 50px;
+    border: 4px solid var(--primary);
+}
+.text-ruler {
+    display: flex;
+    line-height: 1em;
+}
+.text-ruler::before, .text-ruler::after{
+    content: '';
+    display: inline-block;
+    flex-grow: 1;
+    margin-top: 0.5em;
+    background: #000;
+    height: 1px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+/* Styles for signup screen start */
+.signup-container {
+    padding: 30px 90px;
+}
+.signup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.signup-header nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+..signup-header p {
+    margin: 10px;
+    font-size: 30px;
+    font-weight: 300;
+    color: var(--accent);
+}
+.action-button {
+    background: var(--header-color);
+    border: 4px solid var(--primary);
+}
+.action-button:hover,
+.action-button:active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--header-color);
+}
+.signup-header a{
+    margin-left: 10px;
+    font-size: 30px;
+}
+.signup-section {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 83px;
+}
+.signup-main {
+    display: flex;
+    flex-direction: column;
+}
+.signup-main h1 {
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--warm);
+}
+.signup-main p {
+    font-size: 30px;
+    color: var(--accent);
+}
+.signup-form {
+    display: flex;
+    flex-direction: column;
+}
+.signup-form .input {
+    height: 63px;
+    background: var(--input-bg-color);
+    margin-top: 26px;
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    padding-left: 25px;
+}
+.signup-form .input::placeholder {
+    color: var(--warm);
+    font-size: 25px;
+    font-weight: 300;
+}
+.terms {
+    margin-top: 26px;
+}
+.terms label {
+    font-size: 15px;
+    color: var(--warm);
+}
+.terms a,
+.terms a:visited,
+.terms a:active{
+    color: var(--danger);
+    text-decoration: none;
+}
+.terms a:hover {
+    text-decoration: underline;
+}
+.signup-action {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 43px;
+}
+.signup-action > div {
+    margin: 12px 0;
+}
+.create-container {
+    display: flex;
+    justify-content: center;
+}
+.create-button {
+    background: var(--primary);
+    color: var(--header-color);
+    font-size: 20px;
+}
+.external-actions {
+    display: flex;
+    justify-content: space-between;
+}
+.external-actions > .button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-width: 3px;
+    font-size: 15px;
+    font-weight: normal;
+    min-width: 227px;
+    color: #000;
 
+}
+/* Styles for signup screen end*/
 @media only screen and (max-device-width: 764px) {
     #hamburger-menu {
         display: block;
