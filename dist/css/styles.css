@@ -1,0 +1,461 @@
+/* Basic CSS Reset */
+
+* {
+    padding: 0;
+    line-height: 1;
+    margin: 0;
+    font-size: 100%;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    --color-primary: #6C63FF;
+    --color-scondary: #F0EFFF;
+    --color-text-primary: #111D5E;
+    --color-text-secondary: #EEEEEE;
+    --color-text-highlight: #EE8E9E;
+    --color-text-heading: #283593;
+    --color-label-primary: #3A3768;
+    --color-input-background: #EAECF0;
+}
+
+
+/* Styles for buttons and they variations */
+
+.btn {
+    color: var(--color-text-secondary);
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.btn_primary {
+    background: var(--color-primary);
+    width: 80px;
+    /* This is added to 50px of padding */
+}
+.btn_large {
+    width: 186px;
+}
+
+.btn_secondary {
+    background: white;
+    font-size: 1.5rem;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    width: 200px;
+}
+
+/* basic different text styles */
+
+.text_prim {
+    font-size: 4rem;
+    color: var(--color-primary);
+}
+
+.text_sec {
+    font-size: 3rem;
+    color: var(--color-primary);
+}
+
+.text_slogan {
+    font-size: 1.6rem;
+    color: var(--color-text-primary);
+}
+
+
+/* Styles for the header that includes nav and logo */
+
+header {
+    height: 20vh;
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* styles for logo image */
+
+.logo {
+    height: 25px;
+    width: auto;
+}
+
+
+/* Setting up the links */
+
+nav a {
+    font-size: 1.1rem;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    margin: 15px;
+    font-size: 1.5rem;
+    transition: color 0.2s ease-in-out;
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+#mobile-menu {
+    display: none;
+}
+
+
+/* Styles for main banner div */
+
+.bnr {
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    height: 70vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bnr-illu {
+    max-width: 50vw;
+    height: auto;
+}
+
+/* stles for text div inside banner */
+
+.bnr-text {
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    justify-content: space-around;
+}
+
+
+/* Styles for the background two circles */
+
+.jblst-bg {
+    width: 100vw;
+    max-width: 100%;
+    height: 150vh;
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.bg_eli1 {
+    position: relative;
+    float: left;
+    left: -600px;
+}
+
+.bg_eli2 {
+    position: absolute;
+    float: right;
+    top: 350px;
+    right: -30px;
+}
+
+
+/* styles for the main div containing the job listings */
+
+.jblst {
+    margin: 50px auto;
+    width: 80vw;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* Heading styles */
+
+.lst-head {
+    font-size: 2.5rem;
+}
+
+
+/* div containing actual list of jobs */
+
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+/* single job listing styles */
+
+.job {
+    margin: 20px 0;
+    width: 60vw;
+    background: white;
+    display: flex;
+    padding: 10px 40px;
+    border: 2px solid var(--color-primary);
+    border-radius: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.job-logo {
+    width: 8%;
+    height: auto;
+}
+
+.job-comp {
+    width: 40%;
+    text-align: left;
+    padding: 10px;
+    height: 100%;
+}
+
+.job-comp h3 {
+    font-size: 1.3rem;
+    font-display: bold;
+    margin-bottom: 3px;
+}
+
+.job-comp h4 {
+    font-weight: 300;
+}
+
+.job-loc,
+.job-type {
+    flex: 0 0 20%;
+}
+
+
+/* styling for call for action div */
+
+.act {
+    width: 80vw;
+    height: 70vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('/img/icanfly.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 20px;
+}
+
+.act-text {
+    margin: 20px;
+    width: 50%;
+}
+
+.act-text span {
+    color: var(--color-text-highlight);
+}
+
+.btn_start {
+    width: 150px;
+    margin-left: 20px;
+}
+/*
+Utilities
+ */
+.text-ruler {
+    display: flex;
+    line-height: 1em;
+}
+.text-ruler::before, .text-ruler::after{
+    content: '';
+    display: inline-block;
+    flex-grow: 1;
+    margin-top: 0.5em;
+    background: #000;
+    height: 1px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+/* Styles for signup screen start */
+.header-label {
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--color-label-primary);
+}
+.signup-section {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 80px;
+}
+.signup-main {
+    display: flex;
+    flex-direction: column;
+}
+.signup-main h1 {
+    font-size: 40px;
+    font-weight: 500;
+    padding: 10px 0;
+    color: var(--color-text-heading);
+}
+.signup-main p {
+    font-size: 30px;
+    color: var(--color-label-primary);
+}
+.signup-form {
+    display: flex;
+    flex-direction: column;
+}
+.signup-form .input {
+    height: 63px;
+    background: var(--color-input-background);
+    margin-top: 26px;
+    border: 1px solid var(--color-primary);
+    border-radius: 10px;
+    padding-left: 25px;
+}
+.signup-form .input::placeholder {
+    color: var(--color-text-heading);
+    font-size: 25px;
+    font-weight: 300;
+}
+.terms {
+    display: flex;
+    margin-top: 26px;
+}
+.terms label {
+    font-size: 15px;
+    margin-left: 5px;
+    color: var(--color-text-heading);
+}
+.terms a,
+.terms a:visited,
+.terms a:active{
+    color: var(--color-text-highlight);
+    text-decoration: none;
+}
+.terms a:hover {
+    text-decoration: underline;
+}
+.signup-action {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 43px;
+}
+.signup-action > div {
+    margin: 12px 0;
+}
+.create-container {
+    display: flex;
+    justify-content: center;
+}
+.external-actions {
+    display: flex;
+    justify-content: space-between;
+}
+.external-actions > .btn {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 15px;
+}
+/* Styles for signup screen end*/
+
+@media only screen and (max-device-width: 764px) {
+    #hamburger-menu {
+        display: block;
+        float: right;
+        cursor: pointer;
+    }
+
+    .logo {
+        width: 30vw;
+        height: auto;
+    }
+
+    .bnr-illu {
+        max-width: 40vw;
+        height: auto;
+    }
+
+    .text_prim {
+        font-size: 2rem;
+    }
+    
+    .text_sec {
+        font-size: 1.3rem;
+    }
+
+    .text_slogan {
+        font-size: 1rem;
+    }
+
+    nav a {
+        margin: 5px;
+        font-size: .8rem;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
+        clear: both;
+    }
+
+    .btn {
+        color: var(--color-text-secondary);
+        padding: 10px;
+        border-radius: 30px;
+        font-size: .7rem;
+        text-align: center;
+    }
+    
+    .btn_primary {
+        background: var(--color-primary);
+        width: 50px;
+        /* This is added to 50px of padding */
+    }
+
+    .btn_secondary {
+        font-size: .7rem;
+        border: 1.1px solid var(--color-primary);
+        color: var(--color-primary);
+        width: 150px;
+    }
+    .btn_large {
+        width: 150px;
+    }
+
+    .header-label, .signup-art {
+        display: none;
+    }
+    .signup-section {
+        margin: 0;
+        padding: 10px;
+    }
+    .signup-main h1 {
+        font-size: 25px;
+    }
+    .signup-main p {
+        font-size: 15px;
+    }
+    .signup-form .input {
+        height: 50px;
+        margin-top: 26px;
+        padding-left: 10px;
+    }
+    .signup-form .input::placeholder {
+        font-size: 20px;
+    }
+    .terms label {
+        font-size: 12px;
+    }
+    .signup-action {
+        margin-top: 20px;
+    }
+    .external-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    .external-actions .icon-button {
+        font-size: 0.7rem;
+        margin: 5px 0;
+    }
+}
