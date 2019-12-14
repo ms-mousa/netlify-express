@@ -16,9 +16,6 @@ node_modules
 *.sar
 *.class
 
-# Maven
-target/
-
 # IntelliJ project files
 *.iml
 *.iws
