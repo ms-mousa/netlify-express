@@ -79,7 +79,7 @@ header {
 /* styles for logo image */
 
 .logo {
-    height: 30px;
+    height: 40px;
     width: auto;
 }
 
@@ -357,7 +357,7 @@ Utilities
 }
 /* Styles for signup screen end*/
 
-@media only screen and (max-device-width: 764px) {
+@media only screen and (max-device-width: 840px) {
     #hamburger-menu {
         display: block;
         float: right;
