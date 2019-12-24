@@ -8,7 +8,8 @@ const db = require("mongoose");
 const server = express();
 
 // Import URI to connect to database from the secrets file
-const URI = require("../secrets").dbURI;
+const URI =
+  "mongodb+srv://GoodStart:G00d$taRt!@@goodstart-itjqy.mongodb.net/test?retryWrites=true&w=majority";
 
 // use the imported URI to connect to the db
 db.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true })
