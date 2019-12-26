@@ -19,7 +19,7 @@ db.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true })
 server.use(bodyParser.json());
 
 // import the user model
-const User = require("../models/User");
+const User = require("./UserModel");
 
 // @route   GET api Users
 // @desc    Get all the Users
