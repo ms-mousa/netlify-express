@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --config webpack.config.js --mode production",
-    "lambda": "netlify-lambda build ./src/server",
+    "lambda": "netlify-lambda build ./src/server/functions",
     "start": "webpack-dev-server --mode development --open",
     "server": "nodemon ./src/server/server.js",
     "serverLocal": "nodemon ./src/server/server-local.js"
