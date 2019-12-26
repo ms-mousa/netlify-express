@@ -24,12 +24,22 @@ const User = require("./UserModel");
 // @route   GET api Users
 // @desc    Get all the Users
 // @access  Public
-server.get("/user", (req, res) => {
+server.get("/.netlify/functions/user", (req, res) => {
+  res.json("hello");
+  User.find()
+    .sort({ date: -1 })
+    .then(users => res.json(users));
+});
+// @route   GET api Users
+// @desc    Get all the Users
+// @access  Public
+server.get("/", (req, res) => {
+  res.json("root");
   User.find()
     .sort({ date: -1 })
     .then(users => res.json(users));
 });
 
 // export the serverless version of the server for netlify
-module.exports = server;
+module.exports = server; // for local server
 module.exports.handler = serverless(server);
