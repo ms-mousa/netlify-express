@@ -20,8 +20,8 @@ db.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true })
 server.use(bodyParser.json());
 
 // using the router in any request that comes to the netlify function route
-server.use("/.netlify/functions/server", userRouter); // path must route to lambda
+server.use("/.netlify/functions/", userRouter); // path must route to lambda
 
 // export the serverless version of the server for netlify
 module.exports = server;
-module.exports.handler = serverless(server);
+// module.exports.handler = serverless(server);
