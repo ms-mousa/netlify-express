@@ -19,13 +19,12 @@ db.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true })
 server.use(bodyParser.json());
 
 // import the user model
-const User = require("./UserModel");
+const User = require("../models/User");
 
 // @route   GET api Users
 // @desc    Get all the Users
 // @access  Public
 server.get("/.netlify/functions/user", (req, res) => {
-  res.json("hello");
   User.find()
     .sort({ date: -1 })
     .then(users => res.json(users));
