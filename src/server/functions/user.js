@@ -8,9 +8,9 @@ const db = require("mongoose");
 const server = express();
 
 // Import URI to connect to database from the secrets file
-const URI = require("../secrets");
+const dbURI = require("../secrets");
 // use the imported URI to connect to the db
-db.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true })
+db.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("Connection to db successful"))
   .catch(err => console.log(err));
 // use the bodyparser as an app level middlerware function
@@ -20,6 +20,9 @@ server.use(bodyParser.json());
 const User = require("../models/User");
 // import the router from express
 const router = express.Router();
+
+// Use the router whenever you receve any requests to the netlify functions route
+server.use("/.netlify/functions/", router);
 
 // @route   GET api Users
 // @desc    Get all the Users
@@ -38,9 +41,6 @@ router.get("/", (req, res) => {
     .sort({ date: -1 })
     .then(users => res.json(users));
 });
-
-// Use the router whenever you receve any requests to the netlify functions route
-server.use("/.netlify/functions", router);
 
 // export the serverless version of the server for netlify
 module.exports = server; // for local server
