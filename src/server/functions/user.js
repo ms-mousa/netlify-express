@@ -8,9 +8,7 @@ const db = require("mongoose");
 const server = express();
 
 // Import URI to connect to database from the secrets file
-const URI =
-  "mongodb+srv://GoodStart:G00d$taRt!@@goodstart-itjqy.mongodb.net/test?retryWrites=true&w=majority";
-
+const URI = require("../secrets");
 // use the imported URI to connect to the db
 db.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("Connection to db successful"))
@@ -20,11 +18,13 @@ server.use(bodyParser.json());
 
 // import the user model
 const User = require("../models/User");
+// import the router from express
+const router = express.Router();
 
 // @route   GET api Users
 // @desc    Get all the Users
 // @access  Public
-server.get("/.netlify/functions/user", (req, res) => {
+router.get("/user", (req, res) => {
   User.find()
     .sort({ date: -1 })
     .then(users => res.json(users));
@@ -32,12 +32,15 @@ server.get("/.netlify/functions/user", (req, res) => {
 // @route   GET api Users
 // @desc    Get all the Users
 // @access  Public
-server.get("/", (req, res) => {
+router.get("/", (req, res) => {
   res.json("root");
   User.find()
     .sort({ date: -1 })
     .then(users => res.json(users));
 });
+
+// Use the router whenever you receve any requests to the netlify functions route
+server.use("/.netlify/functions", router);
 
 // export the serverless version of the server for netlify
 module.exports = server; // for local server
