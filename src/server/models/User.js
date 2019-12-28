@@ -10,7 +10,7 @@ const userSchema = new schema({
   lastName: {
     type: String
   },
-  DateJoined: {
+  dateJoined: {
     type: Date,
     default: new Date()
   }
