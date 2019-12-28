@@ -6,8 +6,6 @@ const serverless = require("serverless-http");
 const db = require("mongoose");
 // initialize the server as an express object
 const server = express();
-// importing the userRouter to handle API requests for users
-const postRouter = require("./routes/post");
 
 // Import URI to connect to database from the secrets file
 const URI = require("./secrets").dbURI;
@@ -18,9 +16,6 @@ db.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .catch(err => console.log(err));
 // use the bodyparser as an app level middlerware function
 server.use(bodyParser.json());
-
-// using the router in any request that comes to the netlify function route
-server.use("/.netlify/functions/", postRouter); // path must route to lambda
 
 // export the serverless version of the server for netlify
 module.exports = server;
